@@ -48,7 +48,7 @@ function convert() {
   <li>English: ROT13 - <a href="http://www.rot13.com/">compatible with rot13.com</a></li>
   <li>Numbers: ROT5</li>
 </ul>
-<p><textarea cols="80" rows="10" id="from" onchange="convert()" onkeypress="convert()"></textarea>
+<p><textarea cols="80" rows="10" id="from" oninput="convert()" onkeypress="convert()"></textarea>
 <p><input type="button" value="Convert" onclick="convert()">
 <p>Result:
 <p><textarea cols="80" rows="10" id="to"></textarea>
