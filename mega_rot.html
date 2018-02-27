@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Mega ROT</title>
 <script>
 var alphabeths = {
     russian : "абвгдежзийклмнопрстуфхцчшщъыьэюя",
@@ -35,11 +37,19 @@ function convert() {
  document.getElementById("to").value = res;
 }
 </script>
+</head>
 
 <body>
-<p>The content of the body element is displayed in your browser.
-<p><textarea cols="80" rows="10" id="from" onchange="convert()"></textarea>
+<h1>ROT all the things!</h1>
+<h2>Convertion rules</h2>
+<ul>
+  <li>Russian: ROT16 (ignoring ё) - <a href="https://planetcalc.ru/1434/">compatible with planetcalc.ru</a></li>
+  <li>English: ROT13 - <a href="http://www.rot13.com/">compatible with rot13.com</a></li>
+  <li>Numbers: ROT5</li>
+</ul>
+<p><textarea cols="80" rows="10" id="from" onchange="convert()" onkeypress="convert()"></textarea>
 <p><input type="button" value="Convert" onclick="convert()">
+<p>Result:
 <p><textarea cols="80" rows="10" id="to"></textarea>
 
 </body>
