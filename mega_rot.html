@@ -12,9 +12,9 @@ var alphabeths = {
 
 function mapit() {
   var m = {};
-  for (ai in alphabeths) {
+  for (var ai in alphabeths) {
     var a = alphabeths[ai];
-    for (idx = 0; idx < a.length; ++idx) {
+    for (var idx = 0; idx < a.length; ++idx) {
       var f = a[idx], t = a[(idx + a.length/2) % a.length];
       m[f] = t;
       m[f.toUpperCase()] = t.toUpperCase();      
@@ -28,7 +28,7 @@ var mapping = mapit();
 function convert() {
  var src = document.getElementById("from").value;
  var res = "";
- for (i = 0; i < src.length; i++) {
+ for (var i = 0; i < src.length; i++) {
    if (mapping[src[i]]) {
      res += mapping[src[i]];
    } else {
