@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script>
+var alphabeths = {
+    russian : "абвгдежзийклмнопрстуфхцчшщъыьэюя",
+    english : "abcdefghijklmnopqrstuvwxyz",
+    digits : "0123456789"
+};
+
+function mapit() {
+  var m = {};
+  for (ai in alphabeths) {
+    var a = alphabeths[ai];
+    for (idx = 0; idx < a.length; ++idx) {
+      var f = a[idx], t = a[(idx + a.length/2) % a.length];
+      m[f] = t;
+      m[f.toUpperCase()] = t.toUpperCase();      
+    }
+  }
+  return m;
+}
+
+var mapping = mapit();
+
+function convert() {
+ var src = document.getElementById("from").value;
+ var res = "";
+ for (i = 0; i < src.length; i++) {
+   if (mapping[src[i]]) {
+     res += mapping[src[i]];
+   } else {
+     res += src[i];
+   }
+ }
+ document.getElementById("to").value = res;
+}
+</script>
+
+<body>
+<p>The content of the body element is displayed in your browser.
+<p><textarea cols="80" rows="10" id="from"></textarea>
+<p><input type="button" value="Convert" onclick="convert()">
+<p><textarea cols="80" rows="10" id="to"></textarea>
+
+</body>
+
+</html>
