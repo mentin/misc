@@ -43,8 +43,8 @@
     document.getElementById("width_out").innerText = w.toFixed(2);
     document.getElementById("height_out").innerText = h.toFixed(2);
     document.getElementById("area_out").innerText = (h * w).toFixed(2);
+    document.getElementById("ratio_out").innerText = (w / h).toFixed(3);
     document.getElementById("density_out").innerText = d.toFixed(2);
-    
   }
 </script>
 </head>
@@ -76,6 +76,7 @@
 <p>Screen area: <span id="area_out"></span> square inches.
 <p>Width: <span id="width_out"></span>, 
     height: <span id="height_out"></span> inches.
+<p>Screen width/height ratio: <span id="ratio_out"></span>
 <p>Pixel density: <span id="density_out"></span> pixels per inch.
 </body>
 
