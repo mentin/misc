@@ -57,15 +57,19 @@
 <table style="width:auto">
 <tbody>
 <tr>
-<td>Diagonal </td>
-<td><input type="number" id="size" step="0.1" oninput="compute()"> inches</td> 
-<td>or select <select id="size_choice" oninput="updateSize()"></select></td>
+  <th colspan="2">Diagonal</th>
+</tr>
+<tr>  
+  <td><input type="number" id="size" step="0.1" oninput="compute()"> inches</td> 
+  <td>or select <select id="size_choice" oninput="updateSize()"></select></td>
 </tr>
 
 <tr>
-<td>Resolution</td>
-<td><input type="number" id="width" oninput="compute()"> x <input type="number" id="height" oninput="compute()"></td> 
-<td>or select <select id="resolution" oninput="updateResolution()"></select></td>
+  <th colspan="2">Resolution</th>
+</tr>
+<tr>  
+  <td><input type="number" id="width" oninput="compute()"> x <input type="number" id="height" oninput="compute()"></td> 
+  <td>or select <select id="resolution" oninput="updateResolution()"></select></td>
 </tr>
 </tbody>
 </table>
