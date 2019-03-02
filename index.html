@@ -1,1 +1,9 @@
 <h1>Hello, world<h1>
+
+<h2>Bookmarklets</h2>
+
+<p>Convert unix (and other) time to readable time</p>
+<p>	
+<input type="text" style="width:100%" 
+       value = "javascript:(function(){ b = document.body; b.innerHTML = b.innerHTML.replace(/\b(1[45]\d{8,14}\b)/g, x => new Date(x * Math.pow(10, 13-x.length))); })();"> 
+</p>
