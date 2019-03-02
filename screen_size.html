@@ -17,7 +17,8 @@
   function setup() {
     additems(document.getElementById("size_choice"), [12, 13.3, 15, 20, 32, 40]);
     additems(document.getElementById("resolution"), 
-             ["1024x768", "1280x800", "1366x768", "1600x1200", "1920x1080", "1920x1200", "3840x2160"]);
+             ["1024x768", "1280x800", "1366x768", "1600x1200", "1920x1080", "1920x1200", 
+              "2560x1600 (MBP13)", "2880x1800 (MBP15)", "3840x2160 (UHDTV)"]);
     updateSize();
     updateResolution();
   }
@@ -28,7 +29,7 @@
   }
   function updateResolution() {
     document.getElementById("width").value = document.getElementById("resolution").value.split("x")[0];
-    document.getElementById("height").value = document.getElementById("resolution").value.split("x")[1];
+    document.getElementById("height").value = document.getElementById("resolution").value.split("x")[1].split(" ")[0];
     compute();
   }
 
